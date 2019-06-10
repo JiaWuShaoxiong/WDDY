@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "MovieViewController.h"
+#import "CinemaViewController.h"
+#import "MyViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+   
+    MovieViewController * moVc = [[MovieViewController alloc]init];
+    UINavigationController * moAv = [[UINavigationController alloc]initWithRootViewController:moVc];
+    moAv.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"电影" image:[UIImage imageNamed:@""] tag:0];
+    
+    CinemaViewController * ciVc = [[CinemaViewController alloc]init];
+    UINavigationController * ciAv = [[UINavigationController alloc]initWithRootViewController:ciVc];
+    ciAv.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"影院" image:[UIImage imageNamed:@""] tag:0];
+    
+    MyViewController * myVc = [[MyViewController alloc]init];
+    UINavigationController * myAv = [[UINavigationController alloc]initWithRootViewController:myVc];
+    myAv.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@""] tag:0];
+    
+    UITabBarController * tab = [[UITabBarController alloc]init];
+    tab.viewControllers = @[moAv,ciAv,myAv];
+    self.window.rootViewController = tab;
+    
+    
     return YES;
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA2B22AE332600513D7B /* MovieViewController.m */; };
+		1062AA2E22AE332600513D7B /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062AA2C22AE332600513D7B /* MovieViewController.xib */; };
+		1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA3022AE333900513D7B /* CinemaViewController.m */; };
+		1062AA3322AE333900513D7B /* CinemaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062AA3122AE333900513D7B /* CinemaViewController.xib */; };
+		1062AA3722AE334400513D7B /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA3522AE334400513D7B /* MyViewController.m */; };
+		1062AA3822AE334400513D7B /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062AA3622AE334400513D7B /* MyViewController.xib */; };
 		10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DB9F6422AC981F00E506B4 /* AppDelegate.m */; };
 		10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DB9F6722AC981F00E506B4 /* ViewController.m */; };
 		10DB9F6B22AC981F00E506B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DB9F6922AC981F00E506B4 /* Main.storyboard */; };
@@ -16,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1062AA2A22AE332600513D7B /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		1062AA2B22AE332600513D7B /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		1062AA2C22AE332600513D7B /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
+		1062AA2F22AE333900513D7B /* CinemaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaViewController.h; sourceTree = "<group>"; };
+		1062AA3022AE333900513D7B /* CinemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaViewController.m; sourceTree = "<group>"; };
+		1062AA3122AE333900513D7B /* CinemaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinemaViewController.xib; sourceTree = "<group>"; };
+		1062AA3422AE334400513D7B /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		1062AA3522AE334400513D7B /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		1062AA3622AE334400513D7B /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		10DB9F6022AC981F00E506B4 /* 维度电影.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "维度电影.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10DB9F6322AC981F00E506B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10DB9F6422AC981F00E506B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +54,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1062AA2922AE32CE00513D7B /* One */ = {
+			isa = PBXGroup;
+			children = (
+				1062AA2A22AE332600513D7B /* MovieViewController.h */,
+				1062AA2B22AE332600513D7B /* MovieViewController.m */,
+				1062AA2C22AE332600513D7B /* MovieViewController.xib */,
+				1062AA2F22AE333900513D7B /* CinemaViewController.h */,
+				1062AA3022AE333900513D7B /* CinemaViewController.m */,
+				1062AA3122AE333900513D7B /* CinemaViewController.xib */,
+				1062AA3422AE334400513D7B /* MyViewController.h */,
+				1062AA3522AE334400513D7B /* MyViewController.m */,
+				1062AA3622AE334400513D7B /* MyViewController.xib */,
+			);
+			path = One;
+			sourceTree = "<group>";
+		};
 		10DB9F5722AC981F00E506B4 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +108,7 @@
 		10DB9F7922AC982800E506B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1062AA2922AE32CE00513D7B /* One */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,9 +184,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1062AA3322AE333900513D7B /* CinemaViewController.xib in Resources */,
 				10DB9F7022AC982100E506B4 /* LaunchScreen.storyboard in Resources */,
+				1062AA3822AE334400513D7B /* MyViewController.xib in Resources */,
 				10DB9F6D22AC982100E506B4 /* Assets.xcassets in Resources */,
 				10DB9F6B22AC981F00E506B4 /* Main.storyboard in Resources */,
+				1062AA2E22AE332600513D7B /* MovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,9 +200,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1062AA3722AE334400513D7B /* MyViewController.m in Sources */,
 				10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */,
+				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
+				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
