@@ -7,27 +7,120 @@
 //
 
 #import "CinemaViewController.h"
+#import "CinemaTableViewCell.h"
+#import "CinemaDetailsVC.h"
 
-@interface CinemaViewController ()
+@interface CinemaViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong)UIButton *locationBtn; // 位置按钮
+@property (nonatomic,strong)UIButton *recommendCinemaBtn; // 推荐影院按钮
+@property (nonatomic,strong)UIButton *nearbyCinemaBtn; // 附近影院按钮
+@property (nonatomic,strong)UITableView *table; // 推荐影院表格
 
 @end
 
 @implementation CinemaViewController
+- (UITableView *)table{
+    if (!_table) {
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 150, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height - 150) style:UITableViewStylePlain];
+        _table.delegate = self;
+        _table.dataSource = self;
+        _table.rowHeight = 130;
+        [self.table registerNib:[UINib nibWithNibName:@"CinemaTableViewCell" bundle:nil] forCellReuseIdentifier:@"cellId"];
+    }
+    return _table;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor brownColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.hidden = YES;
+    
+    _locationBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, 30, 60, 50)];
+    [_locationBtn setImage:[UIImage imageNamed:@"ditu.png"] forState:UIControlStateNormal];
+    [_locationBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [_locationBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    _locationBtn.font = [UIFont systemFontOfSize:12];
+    [self.view addSubview:_locationBtn];
+    // 将表格添加在View上
+    [self.view addSubview:self.table];
+    // 推荐影院按钮
+    [self setRecommendCinemaBtn];
+    // 附近影院按钮
+    [self setNearbyCinemaBtn];
+}
+#pragma mark - UITableViewDelegate,UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CinemaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    
+    return cell;
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
+        // 跳转后隐藏标签控制器
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
+
+
+#pragma mark - 设置推荐影院按钮
+- (void)setRecommendCinemaBtn{
+    _recommendCinemaBtn = [[UIButton alloc]initWithFrame:CGRectMake(90, 100, 100, 30)];
+    [_recommendCinemaBtn setTitle:@"推荐影院" forState:UIControlStateNormal];
+    [_recommendCinemaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    // 按钮磨角
+    _recommendCinemaBtn.layer.cornerRadius = 10;
+    _recommendCinemaBtn.clipsToBounds = YES;
+    _recommendCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
+    [_recommendCinemaBtn addTarget:self action:@selector(setRecommendCinemaBtnAndNearbyCinemabtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_recommendCinemaBtn];
+}
+
+#pragma mark - 设置附近影院按钮
+- (void)setNearbyCinemaBtn{
+    _nearbyCinemaBtn = [[UIButton alloc]initWithFrame:CGRectMake(230, 100, 100, 30)];
+    [_nearbyCinemaBtn setTitle:@"附近影院" forState:UIControlStateNormal];
+    [_nearbyCinemaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _nearbyCinemaBtn.backgroundColor = [UIColor whiteColor];
+    [_nearbyCinemaBtn addTarget:self action:@selector(setRecommendCinemaBtnAndNearbyCinemabtn:) forControlEvents:UIControlEventTouchUpInside];
+    // 按钮磨角
+    _nearbyCinemaBtn.layer.cornerRadius = 10;
+    _nearbyCinemaBtn.clipsToBounds = YES;
+    [self.view addSubview:_nearbyCinemaBtn];
+    
+}
+#pragma mark - 改变两个影院按钮之间的状态
+- (void)setRecommendCinemaBtnAndNearbyCinemabtn:(UIButton *)btn{
+    
+    _recommendCinemaBtn.selected = !_nearbyCinemaBtn.selected;
+    //    btn.selected = !btn.selected;
+    if (btn.selected == YES) {
+        _recommendCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
+        [_recommendCinemaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        [_nearbyCinemaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _nearbyCinemaBtn.backgroundColor = [UIColor whiteColor];
+        [self.table reloadData];
+    }else{
+        _nearbyCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
+        [_nearbyCinemaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+        [_recommendCinemaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _recommendCinemaBtn.backgroundColor = [UIColor whiteColor];
+        [self.table reloadData];
+    }
+    
+}
+
 
 @end
