@@ -19,6 +19,11 @@
 		10DB9F6D22AC982100E506B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DB9F6C22AC982100E506B4 /* Assets.xcassets */; };
 		10DB9F7022AC982100E506B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DB9F6E22AC982100E506B4 /* LaunchScreen.storyboard */; };
 		10DB9F7322AC982100E506B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DB9F7222AC982100E506B4 /* main.m */; };
+		3DFAC79E78FC6A8485DAE9FC /* libPods-维度电影.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B39A701ABA1EC84A224C3 /* libPods-维度电影.a */; };
+		DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC122B0A0B500B46682 /* HttpManager.m */; };
+		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
+		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
+		DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,16 @@
 		10DB9F6F22AC982100E506B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10DB9F7122AC982100E506B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10DB9F7222AC982100E506B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4EFE8EBBE948F6C209E7A77C /* Pods-维度电影.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-维度电影.release.xcconfig"; path = "Pods/Target Support Files/Pods-维度电影/Pods-维度电影.release.xcconfig"; sourceTree = "<group>"; };
+		873B39657A9AC85D743668F8 /* Pods-维度电影.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-维度电影.debug.xcconfig"; path = "Pods/Target Support Files/Pods-维度电影/Pods-维度电影.debug.xcconfig"; sourceTree = "<group>"; };
+		AF7B39A701ABA1EC84A224C3 /* libPods-维度电影.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-维度电影.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA646BC022B0A0B500B46682 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
+		DA646BC122B0A0B500B46682 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
+		DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinemaTableViewCell.xib; sourceTree = "<group>"; };
+		DA646BC622B0A17D00B46682 /* CinemaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemaTableViewCell.h; sourceTree = "<group>"; };
+		DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewCell.m; sourceTree = "<group>"; };
+		DA646BCE22B0A25400B46682 /* CinemaDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaDetailsVC.h; sourceTree = "<group>"; };
+		DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaDetailsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFAC79E78FC6A8485DAE9FC /* libPods-维度电影.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +91,8 @@
 			children = (
 				10DB9F6222AC981F00E506B4 /* 维度电影 */,
 				10DB9F6122AC981F00E506B4 /* Products */,
+				189B22ADE251BE277BC6D10A /* Pods */,
+				672897FC2E43F44D9CA44E5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +114,7 @@
 				10DB9F6422AC981F00E506B4 /* AppDelegate.m */,
 				10DB9F6622AC981F00E506B4 /* ViewController.h */,
 				10DB9F6722AC981F00E506B4 /* ViewController.m */,
+				DA646BCA22B0A21E00B46682 /* 影院 */,
 				10DB9F6922AC981F00E506B4 /* Main.storyboard */,
 				10DB9F6C22AC982100E506B4 /* Assets.xcassets */,
 				10DB9F6E22AC982100E506B4 /* LaunchScreen.storyboard */,
@@ -116,11 +135,82 @@
 		10DB9F7A22AC982A00E506B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA646BC422B0A17D00B46682 /* 影院 */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
 		10DB9F7B22AC982B00E506B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA646BC322B0A13200B46682 /* 影院 */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		189B22ADE251BE277BC6D10A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				873B39657A9AC85D743668F8 /* Pods-维度电影.debug.xcconfig */,
+				4EFE8EBBE948F6C209E7A77C /* Pods-维度电影.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		672897FC2E43F44D9CA44E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B39A701ABA1EC84A224C3 /* libPods-维度电影.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA646BC322B0A13200B46682 /* 影院 */ = {
+			isa = PBXGroup;
+			children = (
+				DA646BC022B0A0B500B46682 /* HttpManager.h */,
+				DA646BC122B0A0B500B46682 /* HttpManager.m */,
+			);
+			path = "影院";
+			sourceTree = "<group>";
+		};
+		DA646BC422B0A17D00B46682 /* 影院 */ = {
+			isa = PBXGroup;
+			children = (
+				DA646BC622B0A17D00B46682 /* CinemaTableViewCell.h */,
+				DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */,
+				DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */,
+			);
+			path = "影院";
+			sourceTree = "<group>";
+		};
+		DA646BCA22B0A21E00B46682 /* 影院 */ = {
+			isa = PBXGroup;
+			children = (
+				DA646BCD22B0A22900B46682 /* Model */,
+				DA646BCC22B0A22800B46682 /* View */,
+				DA646BCB22B0A22700B46682 /* Controller */,
+			);
+			path = "影院";
+			sourceTree = "<group>";
+		};
+		DA646BCB22B0A22700B46682 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA646BCE22B0A25400B46682 /* CinemaDetailsVC.h */,
+				DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA646BCC22B0A22800B46682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA646BCD22B0A22900B46682 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -134,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10DB9F7622AC982100E506B4 /* Build configuration list for PBXNativeTarget "维度电影" */;
 			buildPhases = (
+				6C2CB6DD93AE95003F9502E0 /* [CP] Check Pods Manifest.lock */,
 				10DB9F5C22AC981F00E506B4 /* Sources */,
 				10DB9F5D22AC981F00E506B4 /* Frameworks */,
 				10DB9F5E22AC981F00E506B4 /* Resources */,
@@ -185,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1062AA3322AE333900513D7B /* CinemaViewController.xib in Resources */,
+				DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */,
 				10DB9F7022AC982100E506B4 /* LaunchScreen.storyboard in Resources */,
 				1062AA3822AE334400513D7B /* MyViewController.xib in Resources */,
 				10DB9F6D22AC982100E506B4 /* Assets.xcassets in Resources */,
@@ -195,16 +287,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C2CB6DD93AE95003F9502E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-维度电影-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10DB9F5C22AC981F00E506B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */,
 				1062AA3722AE334400513D7B /* MyViewController.m in Sources */,
 				10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */,
 				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
+				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
+				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +465,7 @@
 		};
 		10DB9F7722AC982100E506B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873B39657A9AC85D743668F8 /* Pods-维度电影.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -361,6 +482,7 @@
 		};
 		10DB9F7822AC982100E506B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EFE8EBBE948F6C209E7A77C /* Pods-维度电影.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
