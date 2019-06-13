@@ -152,12 +152,9 @@
 		10DB9F6222AC981F00E506B4 /* 维度电影 */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				10024E6622B1EE79009CDB25 /* DiSanFang3D */,
-=======
 				DA646BC022B0A0B500B46682 /* HttpManager.h */,
 				DA646BC122B0A0B500B46682 /* HttpManager.m */,
->>>>>>> 728c5b54645c73c1070986706d0b68924fecae37
 				10DB9F7B22AC982B00E506B4 /* Model */,
 				10DB9F7A22AC982A00E506B4 /* View */,
 				10DB9F7922AC982800E506B4 /* Controller */,
@@ -412,15 +409,10 @@
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
-<<<<<<< HEAD
-				10024E6922B1EE9E009CDB25 /* LQScrollView.m in Sources */,
-				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				10024E6D22B1F1AF009CDB25 /* MovieMD.m in Sources */,
-=======
 				DA0179A722B1D2940005E402 /* LQScrollView.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
->>>>>>> 728c5b54645c73c1070986706d0b68924fecae37
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
 				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
