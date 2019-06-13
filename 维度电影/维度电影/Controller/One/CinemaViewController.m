@@ -63,12 +63,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 0) {
         CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
         // 跳转后隐藏标签控制器
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    }
     
 }
 

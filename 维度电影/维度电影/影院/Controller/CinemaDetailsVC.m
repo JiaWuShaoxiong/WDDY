@@ -7,6 +7,7 @@
 //
 
 #import "CinemaDetailsVC.h"
+#import "LQScrollView.h"
 
 @interface CinemaDetailsVC ()
 
@@ -36,6 +37,12 @@
     _myImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, _myView.frame.size.width, _myView.frame.size.height)];
     _myImg.image = [UIImage imageNamed:@"background"];
     [_myView addSubview:_myImg];
+    
+    // 3D重叠滚动视图
+    NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"2222",@"4444",@"5555",@"66666",@"71212",nil];
+    LQScrollView *lq = [[LQScrollView alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 150) imageArray:arr];
+    [self.myImg addSubview:lq];
+    
     
 }
 

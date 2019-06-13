@@ -20,6 +20,8 @@
 		10DB9F7022AC982100E506B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DB9F6E22AC982100E506B4 /* LaunchScreen.storyboard */; };
 		10DB9F7322AC982100E506B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DB9F7222AC982100E506B4 /* main.m */; };
 		3DFAC79E78FC6A8485DAE9FC /* libPods-维度电影.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B39A701ABA1EC84A224C3 /* libPods-维度电影.a */; };
+		DA0179A722B1D2940005E402 /* LQScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0179A622B1D2940005E402 /* LQScrollView.m */; };
+		DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA017A0722B1DEDF0005E402 /* CinemaModel.m */; };
 		DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC122B0A0B500B46682 /* HttpManager.m */; };
 		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
 		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
@@ -49,6 +51,10 @@
 		4EFE8EBBE948F6C209E7A77C /* Pods-维度电影.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-维度电影.release.xcconfig"; path = "Pods/Target Support Files/Pods-维度电影/Pods-维度电影.release.xcconfig"; sourceTree = "<group>"; };
 		873B39657A9AC85D743668F8 /* Pods-维度电影.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-维度电影.debug.xcconfig"; path = "Pods/Target Support Files/Pods-维度电影/Pods-维度电影.debug.xcconfig"; sourceTree = "<group>"; };
 		AF7B39A701ABA1EC84A224C3 /* libPods-维度电影.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-维度电影.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0179A522B1D2940005E402 /* LQScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQScrollView.h; path = ../Model/LQScrollView.h; sourceTree = "<group>"; };
+		DA0179A622B1D2940005E402 /* LQScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQScrollView.m; path = ../Model/LQScrollView.m; sourceTree = "<group>"; };
+		DA017A0622B1DEDF0005E402 /* CinemaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaModel.h; sourceTree = "<group>"; };
+		DA017A0722B1DEDF0005E402 /* CinemaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaModel.m; sourceTree = "<group>"; };
 		DA646BC022B0A0B500B46682 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		DA646BC122B0A0B500B46682 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinemaTableViewCell.xib; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 		10DB9F6222AC981F00E506B4 /* 维度电影 */ = {
 			isa = PBXGroup;
 			children = (
+				DA646BC022B0A0B500B46682 /* HttpManager.h */,
+				DA646BC122B0A0B500B46682 /* HttpManager.m */,
 				10DB9F7B22AC982B00E506B4 /* Model */,
 				10DB9F7A22AC982A00E506B4 /* View */,
 				10DB9F7922AC982800E506B4 /* Controller */,
@@ -168,8 +176,8 @@
 		DA646BC322B0A13200B46682 /* 影院 */ = {
 			isa = PBXGroup;
 			children = (
-				DA646BC022B0A0B500B46682 /* HttpManager.h */,
-				DA646BC122B0A0B500B46682 /* HttpManager.m */,
+				DA017A0622B1DEDF0005E402 /* CinemaModel.h */,
+				DA017A0722B1DEDF0005E402 /* CinemaModel.m */,
 			);
 			path = "影院";
 			sourceTree = "<group>";
@@ -206,6 +214,8 @@
 		DA646BCC22B0A22800B46682 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DA0179A522B1D2940005E402 /* LQScrollView.h */,
+				DA0179A622B1D2940005E402 /* LQScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -228,6 +238,7 @@
 				10DB9F5C22AC981F00E506B4 /* Sources */,
 				10DB9F5D22AC981F00E506B4 /* Frameworks */,
 				10DB9F5E22AC981F00E506B4 /* Resources */,
+				89C2026C595800AC9E4D3ACA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +321,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		89C2026C595800AC9E4D3ACA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-维度电影/Pods-维度电影-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-维度电影/Pods-维度电影-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -323,7 +356,9 @@
 				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
+				DA0179A722B1D2940005E402 /* LQScrollView.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
+				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);

@@ -19,9 +19,17 @@
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     // URL
     NSString *url = [NSString stringWithFormat:@"%@%@",@"http://172.17.8.100/movieApi/",urlStr];
-    NSDictionary *dic = [NSDictionary dictionary];
-    [dic setValue:paramas forKey:@"params"];
+//    NSDictionary *dic = [NSDictionary dictionary];
+//    [dic setValue:paramas forKey:@"params"];
     NSLog(@"发送请求:%@\n",url);
+    [manager GET:url parameters:paramas progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 @end
