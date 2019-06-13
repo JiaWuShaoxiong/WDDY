@@ -78,32 +78,32 @@
     
         //设置五个位置的rect
     float midWidth = WIDTH/2.1;
-    float midheigh = HEIGHT*0.55-50-50;
+    float midheigh = HEIGHT*0.55-100-90;
     float midpointX = WIDTH/2-midWidth/2;
     float midpointY = 5+50;
     rectmid = CGRectMake(midpointX, midpointY, midWidth, midheigh);
     
     
     float midL1Width = WIDTH/3-offSetW;
-    float midL1heigh = HEIGHT*0.55-50-40-offSetH;
+    float midL1heigh = HEIGHT*0.55-100-90-offSetH;
     float midL1pointX = WIDTH/2 - midWidth/2-midL1Width/2;
     float midL1pointY = offSetW+50;
     rectmidL1 = CGRectMake(midL1pointX, midL1pointY, midL1Width, midL1heigh);
     
     float midL2Width = WIDTH/3-offSetW-20;
-    float midL2heigh = HEIGHT*0.55-50-40-offSetH-40;
+    float midL2heigh = HEIGHT*0.55-100-90-offSetH-40;
     float midL2pointX = WIDTH/2 - midWidth/2-midL1Width/2-midL2Width/2;
     float midL2pointY = offSetW+20+50;
     rectmidL2 = CGRectMake(midL2pointX, midL2pointY, midL2Width, midL2heigh);
     
     float midR1Width = WIDTH/3-offSetW;
-    float midR1heigh = HEIGHT*0.55-50-40-offSetH;
+    float midR1heigh = HEIGHT*0.55-100-90-offSetH;
     float midR1pointX = WIDTH/2 + midWidth/2-midL1Width/2;
     float midR1pointY = offSetW+50;
     rectmidR1 = CGRectMake(midR1pointX, midR1pointY, midR1Width, midR1heigh);
     
     float midR2Width = WIDTH/3-offSetW-20;
-    float midR2heigh = HEIGHT*0.55-50-40-offSetH-40;
+    float midR2heigh = HEIGHT*0.55-100-90-offSetH-40;
     float midR2pointX = WIDTH/2 + midWidth/2+midL1Width/2-midL2Width/2;
     float midR2pointY = offSetW+20+50;
     rectmidR2 = CGRectMake(midR2pointX, midR2pointY, midR2Width, midR2heigh);
