@@ -419,11 +419,8 @@
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
-<<<<<<< HEAD
 				ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */,
-=======
 				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
->>>>>>> 46dc5f5d70acf09f9e964aa1c8a47fbd07aa5107
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
