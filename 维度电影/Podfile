@@ -4,5 +4,6 @@ platform :ios, '9.0'
 target '维度电影' do
 
 pod 'AFNetworking'
+pod 'SVProgressHUD'
 
 end

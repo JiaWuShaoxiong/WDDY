@@ -40,7 +40,8 @@
     [_locationBtn setImage:[UIImage imageNamed:@"ditu.png"] forState:UIControlStateNormal];
     [_locationBtn setTitle:@"北京" forState:UIControlStateNormal];
     [_locationBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    _locationBtn.font = [UIFont systemFontOfSize:12];
+//    _locationBtn.font = [UIFont systemFontOfSize:12];
+    _locationBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [self.view addSubview:_locationBtn];
     // 将表格添加在View上
     [self.view addSubview:self.table];
@@ -63,12 +64,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if (indexPath.row == 0) {
         CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
         // 跳转后隐藏标签控制器
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
-    }
     
 }
 
