@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MJExtension.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class Details;
@@ -14,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong)NSString *status; // 状态
 @property (nonatomic,strong)NSString *message; // 提示消息
-@property (nonatomic,strong)Details *result;
+@property (nonatomic,strong)NSArray<Details *>*result;
 
 @end
 

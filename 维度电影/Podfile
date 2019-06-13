@@ -5,5 +5,7 @@ target '维度电影' do
 
 pod 'AFNetworking'
 pod 'SVProgressHUD'
+pod 'MJExtension'
+pod 'SDWebImage'
 
 end

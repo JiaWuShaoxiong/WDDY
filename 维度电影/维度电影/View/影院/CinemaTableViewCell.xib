@@ -50,8 +50,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5T-UE-NdU">
                                 <rect key="frame" x="244" y="70" width="16" height="22"/>
-                                <state key="normal" image="weishoucang.png"/>
-                                <state key="selected" image="shoucang.png"/>
+                                <state key="normal" image="weishoucang"/>
+                                <state key="selected" image="shoucang"/>
+                                <connections>
+                                    <action selector="setCollectionCinemaBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sBv-8s-Yxx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -87,7 +90,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="shoucang.png" width="16" height="16"/>
-        <image name="weishoucang.png" width="16" height="16"/>
+        <image name="shoucang" width="16" height="16"/>
+        <image name="weishoucang" width="16" height="16"/>
     </resources>
 </document>

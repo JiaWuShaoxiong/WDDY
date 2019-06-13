@@ -9,8 +9,14 @@
 #import "CinemaViewController.h"
 #import "CinemaTableViewCell.h"
 #import "CinemaDetailsVC.h"
+#import "CinemaModel.h"
+#import "HttpManager.h"
+#import "MJExtension.h"
 
-@interface CinemaViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CinemaViewController ()<UITableViewDelegate,UITableViewDataSource>{
+    
+    CinemaModel *cinemaMd;
+}
 
 @property (nonatomic,strong)UIButton *locationBtn; // 位置按钮
 @property (nonatomic,strong)UIButton *recommendCinemaBtn; // 推荐影院按钮
@@ -48,26 +54,47 @@
     [self setRecommendCinemaBtn];
     // 附近影院按钮
     [self setNearbyCinemaBtn];
+    // 网络请求
+    [self requestCinemaData];
 }
+#pragma mark - 网络请求
+- (void)requestCinemaData{
+    //Details *d = [[Details alloc]init];
+    [HttpManager GetWithUrl:@"cinema/v1/findRecommendCinemas" paramas:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} Success:^(id  _Nonnull responseObject) {
+//        NSLog(@"%@",responseObject);
+        NSDictionary *dicJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dicJson);
+        self->cinemaMd = [CinemaModel mj_objectWithKeyValues:dicJson];
+        
+        [self.table reloadData];
+    } Failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+//    return 5;
+    return cinemaMd.result.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CinemaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     
+    Details* tls = cinemaMd.result[indexPath.row];
+    
+    [cell cellWithCinemaModel:tls];
+    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-        CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
-        // 跳转后隐藏标签控制器
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    
+
+    CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
+    // 跳转后隐藏标签控制器
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

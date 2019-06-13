@@ -10,4 +10,14 @@
 
 @implementation CinemaModel
 
++ (NSDictionary *)mj_objectClassInArray{
+    
+    return @{@"result":@"Details"};
+}
+
 @end
+
+@implementation Details
+
+@end
+
