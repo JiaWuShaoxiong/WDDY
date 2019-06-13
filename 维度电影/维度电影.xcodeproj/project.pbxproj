@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10024E6922B1EE9E009CDB25 /* LQScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E6822B1EE9E009CDB25 /* LQScrollView.m */; };
+		10024E6D22B1F1AF009CDB25 /* MovieMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E6C22B1F1AF009CDB25 /* MovieMD.m */; };
+		10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E7022B1F1DF009CDB25 /* MovieTableViewCell.m */; };
 		1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA2B22AE332600513D7B /* MovieViewController.m */; };
 		1062AA2E22AE332600513D7B /* MovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1062AA2C22AE332600513D7B /* MovieViewController.xib */; };
 		1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA3022AE333900513D7B /* CinemaViewController.m */; };
@@ -31,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10024E6722B1EE9E009CDB25 /* LQScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQScrollView.h; sourceTree = "<group>"; };
+		10024E6822B1EE9E009CDB25 /* LQScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQScrollView.m; sourceTree = "<group>"; };
+		10024E6B22B1F1AF009CDB25 /* MovieMD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieMD.h; sourceTree = "<group>"; };
+		10024E6C22B1F1AF009CDB25 /* MovieMD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieMD.m; sourceTree = "<group>"; };
+		10024E6F22B1F1DF009CDB25 /* MovieTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		10024E7022B1F1DF009CDB25 /* MovieTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		1062AA2A22AE332600513D7B /* MovieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
 		1062AA2B22AE332600513D7B /* MovieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
 		1062AA2C22AE332600513D7B /* MovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewController.xib; sourceTree = "<group>"; };
@@ -82,6 +91,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10024E6622B1EE79009CDB25 /* DiSanFang3D */ = {
+			isa = PBXGroup;
+			children = (
+				10024E6722B1EE9E009CDB25 /* LQScrollView.h */,
+				10024E6822B1EE9E009CDB25 /* LQScrollView.m */,
+			);
+			path = DiSanFang3D;
+			sourceTree = "<group>";
+		};
+		10024E6A22B1F185009CDB25 /* MovieMD */ = {
+			isa = PBXGroup;
+			children = (
+				10024E6B22B1F1AF009CDB25 /* MovieMD.h */,
+				10024E6C22B1F1AF009CDB25 /* MovieMD.m */,
+			);
+			path = MovieMD;
+			sourceTree = "<group>";
+		};
+		10024E6E22B1F1B4009CDB25 /* MovieTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				10024E6F22B1F1DF009CDB25 /* MovieTableViewCell.h */,
+				10024E7022B1F1DF009CDB25 /* MovieTableViewCell.m */,
+			);
+			path = MovieTableViewCell;
+			sourceTree = "<group>";
+		};
 		1062AA2922AE32CE00513D7B /* One */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +155,7 @@
 		10DB9F6222AC981F00E506B4 /* 维度电影 */ = {
 			isa = PBXGroup;
 			children = (
+				10024E6622B1EE79009CDB25 /* DiSanFang3D */,
 				DA646BC022B0A0B500B46682 /* HttpManager.h */,
 				DA646BC122B0A0B500B46682 /* HttpManager.m */,
 				10DB9F7B22AC982B00E506B4 /* Model */,
@@ -150,6 +187,7 @@
 		10DB9F7A22AC982A00E506B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				10024E6E22B1F1B4009CDB25 /* MovieTableViewCell */,
 				DA646BC422B0A17D00B46682 /* 影院 */,
 			);
 			path = View;
@@ -158,6 +196,7 @@
 		10DB9F7B22AC982B00E506B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				10024E6A22B1F185009CDB25 /* MovieMD */,
 				DA646BC322B0A13200B46682 /* 影院 */,
 			);
 			path = Model;
@@ -375,11 +414,16 @@
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
+				10024E6D22B1F1AF009CDB25 /* MovieMD.m in Sources */,
 				DA0179A722B1D2940005E402 /* LQScrollView.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
+<<<<<<< HEAD
 				ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */,
+=======
+				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
+>>>>>>> 46dc5f5d70acf09f9e964aa1c8a47fbd07aa5107
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
