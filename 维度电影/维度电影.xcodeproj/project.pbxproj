@@ -26,6 +26,7 @@
 		DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA017A0722B1DEDF0005E402 /* CinemaModel.m */; };
 		DA017A0C22B280BF0005E402 /* CinemaDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA017A0A22B280BF0005E402 /* CinemaDetailsTableViewCell.m */; };
 		DA017A0D22B280BF0005E402 /* CinemaDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA017A0B22B280BF0005E402 /* CinemaDetailsTableViewCell.xib */; };
+		DA296C1322B28DA80095068E /* TimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C1222B28DA70095068E /* TimeVC.m */; };
 		DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC122B0A0B500B46682 /* HttpManager.m */; };
 		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
 		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
@@ -70,6 +71,8 @@
 		DA017A0922B280BF0005E402 /* CinemaDetailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaDetailsTableViewCell.h; sourceTree = "<group>"; };
 		DA017A0A22B280BF0005E402 /* CinemaDetailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaDetailsTableViewCell.m; sourceTree = "<group>"; };
 		DA017A0B22B280BF0005E402 /* CinemaDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinemaDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		DA296C1122B28DA70095068E /* TimeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeVC.h; sourceTree = "<group>"; };
+		DA296C1222B28DA70095068E /* TimeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeVC.m; sourceTree = "<group>"; };
 		DA646BC022B0A0B500B46682 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		DA646BC122B0A0B500B46682 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinemaTableViewCell.xib; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 			children = (
 				DA646BCE22B0A25400B46682 /* CinemaDetailsVC.h */,
 				DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */,
+				DA296C1122B28DA70095068E /* TimeVC.h */,
+				DA296C1222B28DA70095068E /* TimeVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
 				ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */,
 				DA017A0C22B280BF0005E402 /* CinemaDetailsTableViewCell.m in Sources */,
+				DA296C1322B28DA80095068E /* TimeVC.m in Sources */,
 				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
 			);
