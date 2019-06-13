@@ -24,11 +24,14 @@
     self.navigationController.navigationBar.hidden = YES;
     
     UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 295)];
-    view.backgroundColor = [UIColor purpleColor];
+    UIImageView * bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,[UIScreen mainScreen].bounds.size.width,295)];
+    [bgImgView setImage:[UIImage imageNamed:@"sj"]];
+    [view addSubview:bgImgView];
+    [view sendSubviewToBack:bgImgView];
     
     // 头像
     _imgV = [[UIImageView alloc]initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-100)/2, 100, 100, 100)];
-    _imgV.backgroundColor = [UIColor redColor];
+    [_imgV setImage:[UIImage imageNamed:@"hdpia"]];
     _imgV.layer.masksToBounds = YES;
     _imgV.layer.cornerRadius = 50;
     
@@ -41,7 +44,7 @@
     
     // 系统消息按钮
     UIButton * systemNewsBtn = [[UIButton alloc]initWithFrame:CGRectMake(35, 60, 35, 35)];
-    systemNewsBtn.backgroundColor = [UIColor redColor];
+    [systemNewsBtn setImage:[UIImage  imageNamed:@"8888"] forState:UIControlStateNormal];
     systemNewsBtn.layer.masksToBounds = YES;
     systemNewsBtn.layer.cornerRadius = 35/2;
     
@@ -67,9 +70,9 @@
     UIButton * myNews = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
     
     UIButton * mynewsimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
-    mynewsimg.backgroundColor = [UIColor redColor];
     mynewsimg.layer.masksToBounds = YES;
     mynewsimg.layer.cornerRadius = 45/2;
+    [mynewsimg setImage:[UIImage imageNamed:@"112"] forState:UIControlStateNormal];
     [mynewsimg addTarget:self action:@selector(myNews) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton * mynewstitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
@@ -99,16 +102,15 @@
     // ’我的关注‘btn
     UIButton *  focus = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
     
-    UIImageView *  focusimg = [[UIImageView alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
-    focusimg.backgroundColor = [UIColor redColor];
+    UIButton *  focusimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
+    [focusimg setImage:[UIImage imageNamed:@"114"] forState:UIControlStateNormal];
     focusimg.layer.masksToBounds = YES;
     focusimg.layer.cornerRadius = 45/2;
     
-    UILabel *  focustitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
-    focustitle.text = @"我的关注";
-    focustitle.font = [UIFont systemFontOfSize:15];
-    focustitle.textColor = [UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00];
-    focustitle.textAlignment = NSTextAlignmentCenter;
+    UIButton *  focustitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
+    [focustitle setTitle:@"我的关注" forState:UIControlStateNormal];
+    [focustitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [focustitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
     
     [focus addSubview:focusimg];
     [focus addSubview:focustitle];
@@ -119,16 +121,15 @@
     //’购票记录‘
     UIButton *  buy = [[UIButton alloc]initWithFrame:CGRectMake(150, 15, 70, 90)];
     
-    UIImageView *  buyimg = [[UIImageView alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
-    buyimg.backgroundColor = [UIColor redColor];
+    UIButton *  buyimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
+    [buyimg setImage:[UIImage imageNamed:@"9996"] forState:UIControlStateNormal];
     buyimg.layer.masksToBounds = YES;
     buyimg.layer.cornerRadius = 45/2;
     
-    UILabel *  buytitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
-    buytitle.text = @"购票记录";
-    buytitle.font = [UIFont systemFontOfSize:15];
-    buytitle.textColor = [UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00];
-    buytitle.textAlignment = NSTextAlignmentCenter;
+    UIButton *  buytitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
+    [buytitle setTitle:@"购票记录" forState:UIControlStateNormal];
+    [buytitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [buytitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
     
     [buy addSubview:buyimg];
     [buy addSubview:buytitle];
@@ -149,16 +150,16 @@
     // 意见反馈按钮
     UIButton *  feedback = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
     
-    UIImageView *  feedbackimg = [[UIImageView alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
-    feedbackimg.backgroundColor = [UIColor redColor];
+    UIButton *  feedbackimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
+    [feedbackimg setImage:[UIImage imageNamed:@"3333"] forState:UIControlStateNormal];
     feedbackimg.layer.masksToBounds = YES;
     feedbackimg.layer.cornerRadius = 45/2;
     
-    UILabel *  feedbacktitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
-    feedbacktitle.text = @"意见反馈";
-    feedbacktitle.font = [UIFont systemFontOfSize:15];
-    feedbacktitle.textColor = [UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00];
-    feedbacktitle.textAlignment = NSTextAlignmentCenter;
+    UIButton *  feedbacktitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
+    [feedbacktitle setTitle:@"意见反馈" forState:UIControlStateNormal];
+    [feedbacktitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [feedbacktitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
+    
     
     [feedback addSubview:feedbackimg];
     [feedback addSubview:feedbacktitle];
@@ -168,16 +169,15 @@
     // ‘最新版本’
     UIButton *  newest = [[UIButton alloc]initWithFrame:CGRectMake(150, 15, 70, 90)];
     
-    UIImageView *  newestimg = [[UIImageView alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
-    newestimg.backgroundColor = [UIColor redColor];
+    UIButton *  newestimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
+    [newestimg setImage:[UIImage imageNamed:@"202"] forState:UIControlStateNormal];
     newestimg.layer.masksToBounds = YES;
     newestimg.layer.cornerRadius = 45/2;
     
-    UILabel *  newesttitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
-    newesttitle.text = @"最新版本";
-    newesttitle.font = [UIFont systemFontOfSize:15];
-    newesttitle.textColor = [UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00];
-    newesttitle.textAlignment = NSTextAlignmentCenter;
+    UIButton *  newesttitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
+    [newesttitle setTitle:@"最新版本" forState:UIControlStateNormal];
+    [newesttitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    [newesttitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
     
     [newest addSubview:newestimg];
     [newest addSubview:newesttitle];
