@@ -8,6 +8,7 @@
 
 #import "MyViewController.h"
 #import "MyNewsViewController.h"
+#import "FeedbackViewController.h"
 
 @interface MyViewController ()
 
@@ -146,6 +147,7 @@
     lab3.layer.masksToBounds = YES;
     lab3.layer.cornerRadius = 10;
     [self.view addSubview:lab3];
+    lab3.userInteractionEnabled = YES;
     
     // 意见反馈按钮
     UIButton *  feedback = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
@@ -154,12 +156,13 @@
     [feedbackimg setImage:[UIImage imageNamed:@"3333"] forState:UIControlStateNormal];
     feedbackimg.layer.masksToBounds = YES;
     feedbackimg.layer.cornerRadius = 45/2;
+    [feedbackimg addTarget:self action:@selector(feedback) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *  feedbacktitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
     [feedbacktitle setTitle:@"意见反馈" forState:UIControlStateNormal];
     [feedbacktitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [feedbacktitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
-    
+    [feedbacktitle addTarget:self action:@selector(feedback) forControlEvents:UIControlEventTouchUpInside];
     
     [feedback addSubview:feedbackimg];
     [feedback addSubview:feedbacktitle];
@@ -197,6 +200,13 @@
     
 }
 
+-(void)feedback{
+    
+    FeedbackViewController * fankui = [[FeedbackViewController alloc]init];
+    fankui.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:fankui animated:YES];
+    
+}
 
 
 
