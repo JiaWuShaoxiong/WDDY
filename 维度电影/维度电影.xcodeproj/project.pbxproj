@@ -24,6 +24,7 @@
 		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
 		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
 		DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */; };
+		ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewCell.m; sourceTree = "<group>"; };
 		DA646BCE22B0A25400B46682 /* CinemaDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaDetailsVC.h; sourceTree = "<group>"; };
 		DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaDetailsVC.m; sourceTree = "<group>"; };
+		ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
+		ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 				10DB9F6422AC981F00E506B4 /* AppDelegate.m */,
 				10DB9F6622AC981F00E506B4 /* ViewController.h */,
 				10DB9F6722AC981F00E506B4 /* ViewController.m */,
+				ECFA0CFB22B1D7080026682C /* 我的 */,
 				DA646BCA22B0A21E00B46682 /* 影院 */,
 				10DB9F6922AC981F00E506B4 /* Main.storyboard */,
 				10DB9F6C22AC982100E506B4 /* Assets.xcassets */,
@@ -215,6 +219,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECFA0CFB22B1D7080026682C /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */,
+				ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */,
+			);
+			path = "我的";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +335,7 @@
 				10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */,
 				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
+				ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,

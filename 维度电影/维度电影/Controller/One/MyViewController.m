@@ -7,6 +7,7 @@
 //
 
 #import "MyViewController.h"
+#import "MyNewsViewController.h"
 
 @interface MyViewController ()
 
@@ -60,21 +61,23 @@
     lab1.layer.masksToBounds = YES;
     lab1.layer.cornerRadius = 10;
     [self.view addSubview:lab1];
+    lab1.userInteractionEnabled = YES;
     
     // 我的信息按钮
     UIButton * myNews = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
     
-    UIImageView * mynewsimg = [[UIImageView alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
+    UIButton * mynewsimg = [[UIButton alloc]initWithFrame:CGRectMake(25/2, 10, 45, 45)];
     mynewsimg.backgroundColor = [UIColor redColor];
     mynewsimg.layer.masksToBounds = YES;
     mynewsimg.layer.cornerRadius = 45/2;
+    [mynewsimg addTarget:self action:@selector(myNews) forControlEvents:UIControlEventTouchUpInside];
     
-    UILabel * mynewstitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
-    mynewstitle.text = @"我的信息";
-    mynewstitle.font = [UIFont systemFontOfSize:15];
-    mynewstitle.textColor = [UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00];
-    mynewstitle.textAlignment = NSTextAlignmentCenter;
-    
+    UIButton * mynewstitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
+    [mynewstitle setTitle:@"我的信息" forState:UIControlStateNormal];
+    mynewstitle.titleLabel.font = [UIFont systemFontOfSize:15];
+    [mynewstitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
+    [mynewstitle addTarget:self action:@selector(myNews) forControlEvents:UIControlEventTouchUpInside];
+        
     [myNews addSubview:mynewsimg];
     [myNews addSubview:mynewstitle];
     
@@ -184,6 +187,19 @@
     
     
 }
+
+
+-(void)myNews{
+    
+    MyNewsViewController * mynews = [[MyNewsViewController alloc]init];
+    mynews.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mynews animated:YES];
+    
+}
+
+
+
+
 
 /*
 #pragma mark - Navigation

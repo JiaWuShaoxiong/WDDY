@@ -40,7 +40,8 @@
     [_locationBtn setImage:[UIImage imageNamed:@"ditu.png"] forState:UIControlStateNormal];
     [_locationBtn setTitle:@"北京" forState:UIControlStateNormal];
     [_locationBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    _locationBtn.font = [UIFont systemFontOfSize:12];
+//    _locationBtn.font = [UIFont systemFontOfSize:12];
+    _locationBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [self.view addSubview:_locationBtn];
     // 将表格添加在View上
     [self.view addSubview:self.table];
