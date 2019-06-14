@@ -27,6 +27,15 @@
 		DA017A0C22B280BF0005E402 /* CinemaDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA017A0A22B280BF0005E402 /* CinemaDetailsTableViewCell.m */; };
 		DA017A0D22B280BF0005E402 /* CinemaDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA017A0B22B280BF0005E402 /* CinemaDetailsTableViewCell.xib */; };
 		DA296C1322B28DA80095068E /* TimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C1222B28DA70095068E /* TimeVC.m */; };
+		DA296C1622B332AA0095068E /* NearbyCinemaMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C1522B332AA0095068E /* NearbyCinemaMd.m */; };
+		DA296C1922B337F20095068E /* CinemaInformationMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C1822B337F20095068E /* CinemaInformationMd.m */; };
+		DA296C1C22B33CA50095068E /* UserFollowCinemaMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C1B22B33CA50095068E /* UserFollowCinemaMd.m */; };
+		DA296C2222B33EA20095068E /* RemoveAttentionMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C2122B33EA20095068E /* RemoveAttentionMd.m */; };
+		DA296C2522B33F260095068E /* UserComments.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C2422B33F260095068E /* UserComments.m */; };
+		DA296C2822B341110095068E /* CinemaCommtensMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C2722B341110095068E /* CinemaCommtensMd.m */; };
+		DA296C2B22B3422D0095068E /* FollowCinema.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C2A22B3422D0095068E /* FollowCinema.m */; };
+		DA296C2E22B344460095068E /* CinemaNameQueryMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA296C2D22B344460095068E /* CinemaNameQueryMd.m */; };
+		DA5D293C22B345BD002CDFFB /* CinemaPraiseMd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5D293B22B345BD002CDFFB /* CinemaPraiseMd.m */; };
 		DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC122B0A0B500B46682 /* HttpManager.m */; };
 		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
 		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
@@ -73,6 +82,24 @@
 		DA017A0B22B280BF0005E402 /* CinemaDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CinemaDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		DA296C1122B28DA70095068E /* TimeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeVC.h; sourceTree = "<group>"; };
 		DA296C1222B28DA70095068E /* TimeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeVC.m; sourceTree = "<group>"; };
+		DA296C1422B332AA0095068E /* NearbyCinemaMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NearbyCinemaMd.h; sourceTree = "<group>"; };
+		DA296C1522B332AA0095068E /* NearbyCinemaMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NearbyCinemaMd.m; sourceTree = "<group>"; };
+		DA296C1722B337F20095068E /* CinemaInformationMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaInformationMd.h; sourceTree = "<group>"; };
+		DA296C1822B337F20095068E /* CinemaInformationMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaInformationMd.m; sourceTree = "<group>"; };
+		DA296C1A22B33CA50095068E /* UserFollowCinemaMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserFollowCinemaMd.h; sourceTree = "<group>"; };
+		DA296C1B22B33CA50095068E /* UserFollowCinemaMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserFollowCinemaMd.m; sourceTree = "<group>"; };
+		DA296C2022B33EA20095068E /* RemoveAttentionMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoveAttentionMd.h; sourceTree = "<group>"; };
+		DA296C2122B33EA20095068E /* RemoveAttentionMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemoveAttentionMd.m; sourceTree = "<group>"; };
+		DA296C2322B33F260095068E /* UserComments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserComments.h; sourceTree = "<group>"; };
+		DA296C2422B33F260095068E /* UserComments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserComments.m; sourceTree = "<group>"; };
+		DA296C2622B341110095068E /* CinemaCommtensMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaCommtensMd.h; sourceTree = "<group>"; };
+		DA296C2722B341110095068E /* CinemaCommtensMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaCommtensMd.m; sourceTree = "<group>"; };
+		DA296C2922B3422D0095068E /* FollowCinema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FollowCinema.h; sourceTree = "<group>"; };
+		DA296C2A22B3422D0095068E /* FollowCinema.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FollowCinema.m; sourceTree = "<group>"; };
+		DA296C2C22B344460095068E /* CinemaNameQueryMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaNameQueryMd.h; sourceTree = "<group>"; };
+		DA296C2D22B344460095068E /* CinemaNameQueryMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaNameQueryMd.m; sourceTree = "<group>"; };
+		DA5D293A22B345BD002CDFFB /* CinemaPraiseMd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaPraiseMd.h; sourceTree = "<group>"; };
+		DA5D293B22B345BD002CDFFB /* CinemaPraiseMd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaPraiseMd.m; sourceTree = "<group>"; };
 		DA646BC022B0A0B500B46682 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		DA646BC122B0A0B500B46682 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CinemaTableViewCell.xib; sourceTree = "<group>"; };
@@ -231,6 +258,24 @@
 			children = (
 				DA017A0622B1DEDF0005E402 /* CinemaModel.h */,
 				DA017A0722B1DEDF0005E402 /* CinemaModel.m */,
+				DA296C1422B332AA0095068E /* NearbyCinemaMd.h */,
+				DA296C1522B332AA0095068E /* NearbyCinemaMd.m */,
+				DA296C1722B337F20095068E /* CinemaInformationMd.h */,
+				DA296C1822B337F20095068E /* CinemaInformationMd.m */,
+				DA296C2C22B344460095068E /* CinemaNameQueryMd.h */,
+				DA296C2D22B344460095068E /* CinemaNameQueryMd.m */,
+				DA296C1A22B33CA50095068E /* UserFollowCinemaMd.h */,
+				DA296C1B22B33CA50095068E /* UserFollowCinemaMd.m */,
+				DA296C2922B3422D0095068E /* FollowCinema.h */,
+				DA296C2A22B3422D0095068E /* FollowCinema.m */,
+				DA296C2022B33EA20095068E /* RemoveAttentionMd.h */,
+				DA296C2122B33EA20095068E /* RemoveAttentionMd.m */,
+				DA296C2322B33F260095068E /* UserComments.h */,
+				DA296C2422B33F260095068E /* UserComments.m */,
+				DA296C2622B341110095068E /* CinemaCommtensMd.h */,
+				DA296C2722B341110095068E /* CinemaCommtensMd.m */,
+				DA5D293A22B345BD002CDFFB /* CinemaPraiseMd.h */,
+				DA5D293B22B345BD002CDFFB /* CinemaPraiseMd.m */,
 			);
 			path = "影院";
 			sourceTree = "<group>";
@@ -424,19 +469,28 @@
 				1062AA3722AE334400513D7B /* MyViewController.m in Sources */,
 				10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */,
 				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
+				DA296C1622B332AA0095068E /* NearbyCinemaMd.m in Sources */,
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */,
+				DA296C1C22B33CA50095068E /* UserFollowCinemaMd.m in Sources */,
+				DA296C2222B33EA20095068E /* RemoveAttentionMd.m in Sources */,
+				DA296C2B22B3422D0095068E /* FollowCinema.m in Sources */,
 				10DB9F7322AC982100E506B4 /* main.m in Sources */,
 				10024E6D22B1F1AF009CDB25 /* MovieMD.m in Sources */,
 				DA0179A722B1D2940005E402 /* LQScrollView.m in Sources */,
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
+				DA296C2E22B344460095068E /* CinemaNameQueryMd.m in Sources */,
+				DA296C1922B337F20095068E /* CinemaInformationMd.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
+				DA296C2822B341110095068E /* CinemaCommtensMd.m in Sources */,
 				ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */,
 				DA017A0C22B280BF0005E402 /* CinemaDetailsTableViewCell.m in Sources */,
 				DA296C1322B28DA80095068E /* TimeVC.m in Sources */,
+				DA296C2522B33F260095068E /* UserComments.m in Sources */,
 				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
+				DA5D293C22B345BD002CDFFB /* CinemaPraiseMd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

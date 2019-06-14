@@ -17,7 +17,9 @@
     //编码参数成为JSON，设置编码请求的Content-Type为application/json。
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     // Content-Type 字段来获知请求中的消息主体是用何种方式编码
-    //[manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+//    NSDictionary *micd
     
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     // URL
