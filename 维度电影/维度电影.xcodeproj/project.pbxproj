@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10024E6922B1EE9E009CDB25 /* LQScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E6822B1EE9E009CDB25 /* LQScrollView.m */; };
 		10024E6D22B1F1AF009CDB25 /* MovieMD.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E6C22B1F1AF009CDB25 /* MovieMD.m */; };
 		10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10024E7022B1F1DF009CDB25 /* MovieTableViewCell.m */; };
 		1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1062AA2B22AE332600513D7B /* MovieViewController.m */; };
@@ -29,6 +28,8 @@
 		DA646BC822B0A17D00B46682 /* CinemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA646BC522B0A17D00B46682 /* CinemaTableViewCell.xib */; };
 		DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */; };
 		DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */; };
+		ECA2F19822B33760001B990E /* FocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19722B33760001B990E /* FocusViewController.m */; };
+		ECA2F19B22B33768001B990E /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19A22B33768001B990E /* BuyViewController.m */; };
 		ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */; };
 		ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0D0022B200400026682C /* FeedbackViewController.m */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,10 @@
 		DA646BC722B0A17D00B46682 /* CinemaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemaTableViewCell.m; sourceTree = "<group>"; };
 		DA646BCE22B0A25400B46682 /* CinemaDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CinemaDetailsVC.h; sourceTree = "<group>"; };
 		DA646BCF22B0A25400B46682 /* CinemaDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaDetailsVC.m; sourceTree = "<group>"; };
+		ECA2F19622B33760001B990E /* FocusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FocusViewController.h; sourceTree = "<group>"; };
+		ECA2F19722B33760001B990E /* FocusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusViewController.m; sourceTree = "<group>"; };
+		ECA2F19922B33768001B990E /* BuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
+		ECA2F19A22B33768001B990E /* BuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
 		ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
 		ECFA0CFF22B200400026682C /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
@@ -278,6 +283,10 @@
 			children = (
 				ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */,
 				ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */,
+				ECA2F19622B33760001B990E /* FocusViewController.h */,
+				ECA2F19722B33760001B990E /* FocusViewController.m */,
+				ECA2F19922B33768001B990E /* BuyViewController.h */,
+				ECA2F19A22B33768001B990E /* BuyViewController.m */,
 				ECFA0CFF22B200400026682C /* FeedbackViewController.h */,
 				ECFA0D0022B200400026682C /* FeedbackViewController.m */,
 			);
@@ -422,6 +431,8 @@
 				ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */,
 				10024E7222B1F1DF009CDB25 /* MovieTableViewCell.m in Sources */,
 				1062AA2D22AE332600513D7B /* MovieViewController.m in Sources */,
+				ECA2F19822B33760001B990E /* FocusViewController.m in Sources */,
+				ECA2F19B22B33768001B990E /* BuyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

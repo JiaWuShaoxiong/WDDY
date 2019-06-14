@@ -9,6 +9,8 @@
 #import "MyViewController.h"
 #import "MyNewsViewController.h"
 #import "FeedbackViewController.h"
+#import "FocusViewController.h"
+#import "BuyViewController.h"
 
 @interface MyViewController ()
 
@@ -99,6 +101,7 @@
     lab2.layer.masksToBounds = YES;
     lab2.layer.cornerRadius = 10;
     [self.view addSubview:lab2];
+    lab2.userInteractionEnabled = YES;
     
     // ’我的关注‘btn
     UIButton *  focus = [[UIButton alloc]initWithFrame:CGRectMake(35, 15, 70, 90)];
@@ -107,11 +110,13 @@
     [focusimg setImage:[UIImage imageNamed:@"114"] forState:UIControlStateNormal];
     focusimg.layer.masksToBounds = YES;
     focusimg.layer.cornerRadius = 45/2;
+    [focusimg addTarget:self action:@selector(focus) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *  focustitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
     [focustitle setTitle:@"我的关注" forState:UIControlStateNormal];
     [focustitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [focustitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
+    [focustitle addTarget:self action:@selector(focus) forControlEvents:UIControlEventTouchUpInside];
     
     [focus addSubview:focusimg];
     [focus addSubview:focustitle];
@@ -126,11 +131,13 @@
     [buyimg setImage:[UIImage imageNamed:@"9996"] forState:UIControlStateNormal];
     buyimg.layer.masksToBounds = YES;
     buyimg.layer.cornerRadius = 45/2;
+    [buyimg addTarget:self action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *  buytitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
     [buytitle setTitle:@"购票记录" forState:UIControlStateNormal];
     [buytitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [buytitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
+    [buytitle addTarget:self action:@selector(buy) forControlEvents:UIControlEventTouchUpInside];
     
     [buy addSubview:buyimg];
     [buy addSubview:buytitle];
@@ -176,11 +183,13 @@
     [newestimg setImage:[UIImage imageNamed:@"202"] forState:UIControlStateNormal];
     newestimg.layer.masksToBounds = YES;
     newestimg.layer.cornerRadius = 45/2;
+//    [newestimg addTarget:self action:@selector(newest) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *  newesttitle = [[UIButton alloc]initWithFrame:CGRectMake(0, 67, 70, 15)];
     [newesttitle setTitle:@"最新版本" forState:UIControlStateNormal];
     [newesttitle.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [newesttitle setTitleColor:[UIColor colorWithRed:0.49 green:0.49 blue:0.49 alpha:1.00] forState:UIControlStateNormal];
+//    [newesttitle addTarget:self action:@selector(newest) forControlEvents:UIControlEventTouchUpInside];
     
     [newest addSubview:newestimg];
     [newest addSubview:newesttitle];
@@ -191,7 +200,7 @@
     
 }
 
-
+// 我的信息
 -(void)myNews{
     
     MyNewsViewController * mynews = [[MyNewsViewController alloc]init];
@@ -200,6 +209,23 @@
     
 }
 
+// 我的关注
+-(void)focus{
+    FocusViewController * focus = [[FocusViewController alloc]init];
+    focus.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:focus animated:YES];
+}
+
+// 购票记录
+-(void)buy{
+    BuyViewController * buy = [[BuyViewController alloc]init];
+    buy.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:buy animated:YES];
+}
+
+
+
+// 问题反馈
 -(void)feedback{
     
     FeedbackViewController * fankui = [[FeedbackViewController alloc]init];
@@ -207,6 +233,12 @@
     [self.navigationController pushViewController:fankui animated:YES];
     
 }
+
+//// 最新版本
+//-(void)newest{
+//
+//
+//}
 
 
 
