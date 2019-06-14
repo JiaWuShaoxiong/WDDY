@@ -28,6 +28,9 @@
 @end
 
 @implementation CinemaViewController
+- (void)dealloc{
+    
+}
 - (UITableView *)table{
     if (!_table) {
         _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 150, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height - 150) style:UITableViewStylePlain];
@@ -119,6 +122,16 @@
     CinemaDetailsVC *vc = [[CinemaDetailsVC alloc]init];
     // 跳转后隐藏标签控制器
     vc.hidesBottomBarWhenPushed = YES;
+    
+    if (YES == _recommendCinemaBtn.selected) {
+        Details* dtl = cinemaMd.result[indexPath.row];
+        vc.recommendCinema = dtl;
+    } else {
+        Res *res = nearbyMd.result[indexPath.row];
+        vc.nearbyCinema = res;
+    }
+    
+    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

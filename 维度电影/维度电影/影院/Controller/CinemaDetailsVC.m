@@ -10,6 +10,8 @@
 #import "LQScrollView.h"
 #import "CinemaDetailsTableViewCell.h"
 #import "TimeVC.h"
+#import "CinemaViewController.h"
+#import "UIImageView+WebCache.h"
 
 @interface CinemaDetailsVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -59,7 +61,7 @@
     
     // 3D重叠滚动视图
     NSMutableArray *arr = [NSMutableArray arrayWithObjects:@"2222",@"4444",@"5555",@"66666",@"71212",nil];
-    LQScrollView *lq = [[LQScrollView alloc]initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 500) imageArray:arr];
+    LQScrollView *lq = [[LQScrollView alloc]initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 500) imageArray:arr];
     lq.clipsToBounds = YES;
     [self.view addSubview:lq];
     
@@ -72,16 +74,15 @@
 - (void)setCinemaDetails{
     _cinemaImg = [[UIImageView alloc]initWithFrame:CGRectMake(20, 60, 50, 50)];
     _cinemaImg.backgroundColor = [UIColor whiteColor];
-    _cinemaImg.image = [UIImage imageNamed:@"ccc"];
     [self.myImg addSubview:_cinemaImg];
     
-    _cinemaName = [[UILabel alloc]initWithFrame:CGRectMake(80, 60, 100, 20)];
-    _cinemaName.text = @"CGV影城";
+    _cinemaName = [[UILabel alloc]initWithFrame:CGRectMake(80, 60, 300, 20)];
     _cinemaName.textColor = [UIColor whiteColor];
     [self.myImg addSubview:_cinemaName];
     
-    _cinemaLocation = [[UILabel alloc]initWithFrame:CGRectMake(80, 80, 280, 20)];
-    _cinemaLocation.text = @"似懂非懂所发生的发生的发生的事的非农数据发达的发达大法";
+    _cinemaLocation = [[UILabel alloc]initWithFrame:CGRectMake(80, 80, 280, 40)];
+    _cinemaLocation.lineBreakMode = NSLineBreakByWordWrapping;
+    _cinemaLocation.numberOfLines = 0;
     _cinemaLocation.textColor = [UIColor lightGrayColor];
     _cinemaLocation.font = [UIFont systemFontOfSize:15];
     [self.myImg addSubview:_cinemaLocation];
@@ -89,6 +90,16 @@
     _navigationImg = [[UIImageView alloc]initWithFrame:CGRectMake(370, 70, 30, 30)];
     _navigationImg.image = [UIImage imageNamed:@"daohang"];
     [self.myView addSubview:_navigationImg];
+    
+    if (_recommendCinema) {
+        _cinemaLocation.text = self.recommendCinema.address;
+        _cinemaName.text = self.recommendCinema.name;
+        [_cinemaImg sd_setImageWithURL:[NSURL URLWithString:self.recommendCinema.logo] placeholderImage:[UIImage imageNamed:@"maoyan_logo"]];
+    } else {
+        _cinemaLocation.text = self.nearbyCinema.address;
+        _cinemaName.text = self.nearbyCinema.name;
+        [_cinemaImg sd_setImageWithURL:[NSURL URLWithString:self.nearbyCinema.logo] placeholderImage:[UIImage imageNamed:@"maoyan_logo"]];
+    }
 }
 
 - (void)setReturnBtn{
