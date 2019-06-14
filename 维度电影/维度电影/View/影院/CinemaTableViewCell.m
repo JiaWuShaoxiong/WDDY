@@ -25,6 +25,8 @@
 - (void)setOneCellWithCinemaModel:(Details *)model{
     [_cinemaImg sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:[UIImage imageNamed:@"maoyan_logo"]];
     _cinemaNameLabel.text = model.name;
+    _cinemaLocationLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _cinemaLocationLabel.numberOfLines = 0;
     _cinemaLocationLabel.text = model.address;
     _cinemaDistanceLabel.text = [NSString stringWithFormat:@"%d",model.distance];
     if (model.followCinema == 1) {
