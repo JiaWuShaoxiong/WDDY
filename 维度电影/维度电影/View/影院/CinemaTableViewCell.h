@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CinemaModel.h"
+#import "NearbyCinemaMd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *cinemaDistanceLabel; // 影城距离
 @property (weak, nonatomic) IBOutlet UIButton *collectionCinemaBtn; // 收藏
 
-- (void)cellWithCinemaModel:(Details *)model;
+- (void)setOneCellWithCinemaModel:(Details *)model;
+
+- (void)setTwoCellWithCinemaModel:(Res *)model ;
 
 @end
 

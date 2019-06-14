@@ -22,19 +22,32 @@
     // Configure the view for the selected state
 }
 
-- (void)cellWithCinemaModel:(Details *)model{
+- (void)setOneCellWithCinemaModel:(Details *)model{
+    [_cinemaImg sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:[UIImage imageNamed:@"maoyan_logo"]];
+    _cinemaNameLabel.text = model.name;
+    _cinemaLocationLabel.text = model.address;
+    _cinemaDistanceLabel.text = [NSString stringWithFormat:@"%d",model.distance];
+    if (model.followCinema == 1) {
+        _collectionCinemaBtn.selected = YES;
+    }else{
+        _collectionCinemaBtn.selected = NO;
+    }
+}
+
+- (void)setTwoCellWithCinemaModel:(Res *)model{
     
     [_cinemaImg sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:[UIImage imageNamed:@"maoyan_logo"]];
     _cinemaNameLabel.text = model.name;
     _cinemaLocationLabel.text = model.address;
     _cinemaDistanceLabel.text = [NSString stringWithFormat:@"%d",model.distance];
-    if (model.distance == 1) {
+    if (model.followCinema == 1) {
         _collectionCinemaBtn.selected = YES;
     }else{
         _collectionCinemaBtn.selected = NO;
     }
-
+    
 }
+
 - (IBAction)setCollectionCinemaBtn:(UIButton *)sender {
     
 //    sender.selected = !sender.selected;
