@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MovieViewController.h"
+#import "Controller/One/MovieViewController.h"
 #import "CinemaViewController.h"
 #import "MyViewController.h"
 
