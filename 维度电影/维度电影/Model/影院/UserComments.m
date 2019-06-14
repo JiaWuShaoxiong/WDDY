@@ -10,8 +10,6 @@
 
 @implementation UserComments
 
-+ (NSDictionary *)mj_objectClassInArray{
-
 @end
 
 @implementation CommentsRes
