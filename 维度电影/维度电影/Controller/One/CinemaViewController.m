@@ -11,11 +11,13 @@
 #import "CinemaDetailsVC.h"
 #import "CinemaModel.h"
 #import "HttpManager.h"
+#import "NearbyCinemaMd.h"
 #import "MJExtension.h"
 
 @interface CinemaViewController ()<UITableViewDelegate,UITableViewDataSource>{
     
     CinemaModel *cinemaMd;
+    NearbyCinemaMd *nearbyMd;
 }
 
 @property (nonatomic,strong)UIButton *locationBtn; // 位置按钮
@@ -55,12 +57,12 @@
     [self setRecommendCinemaBtn];
     // 附近影院按钮
     [self setNearbyCinemaBtn];
-    // 网络请求
-    [self requestCinemaData];
+    // 推荐影院网络请求
+    [self requestRecommendCinemaData];
 }
 #pragma mark - 网络请求
-- (void)requestCinemaData{
-    //Details *d = [[Details alloc]init];
+// 推荐影院
+- (void)requestRecommendCinemaData{
     [HttpManager GetWithUrl:@"cinema/v1/findRecommendCinemas" paramas:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} Success:^(id  _Nonnull responseObject) {
 //        NSLog(@"%@",responseObject);
         NSDictionary *dicJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -73,20 +75,42 @@
     }];
 }
 
+// 附近影院
+- (void)requestNearbyCinemaData{
+    [HttpManager GetWithUrl:@"cinema/v1/findNearbyCinemas" paramas:@{@"userId":@(18),@"sessionId":@"15320748258726",@"page":@(1),@"count":@(10)} Success:^(id  _Nonnull responseObject) {
+        //        NSLog(@"%@",responseObject);
+        NSDictionary *dicJson = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"%@",dicJson);
+        self->nearbyMd = [NearbyCinemaMd mj_objectWithKeyValues:dicJson];
+        
+        [self.table reloadData];
+    } Failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
+
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 //    return 5;
-    return cinemaMd.result.count;
+    if (YES == _recommendCinemaBtn.selected) {
+        return cinemaMd.result.count;
+    } else {
+        return nearbyMd.result.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CinemaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
-    
-    Details* tls = cinemaMd.result[indexPath.row];
-    
-    [cell cellWithCinemaModel:tls];
-    
+   
+    if (YES == _recommendCinemaBtn.selected) {
+        Details* tls = cinemaMd.result[indexPath.row];
+        [cell setOneCellWithCinemaModel:tls];
+    } else {
+        Res *res = nearbyMd.result[indexPath.row];
+        [cell setTwoCellWithCinemaModel:res];
+    }
+   
     return cell;
 }
 
@@ -109,6 +133,7 @@
     _recommendCinemaBtn.clipsToBounds = YES;
     _recommendCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
     [_recommendCinemaBtn addTarget:self action:@selector(setRecommendCinemaBtnAndNearbyCinemabtn:) forControlEvents:UIControlEventTouchUpInside];
+    _recommendCinemaBtn.selected = YES;
     [self.view addSubview:_recommendCinemaBtn];
 }
 
@@ -122,6 +147,7 @@
     // 按钮磨角
     _nearbyCinemaBtn.layer.cornerRadius = 10;
     _nearbyCinemaBtn.clipsToBounds = YES;
+    _nearbyCinemaBtn.selected = NO;
     [self.view addSubview:_nearbyCinemaBtn];
     
 }
@@ -133,17 +159,18 @@
     if (btn.selected == YES) {
         _recommendCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
         [_recommendCinemaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+       // [self requestNearbyCinemaData];// 调用推荐影院的网络请求
+        [self requestRecommendCinemaData];
         
         [_nearbyCinemaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _nearbyCinemaBtn.backgroundColor = [UIColor whiteColor];
-        [self.table reloadData];
     }else{
         _nearbyCinemaBtn.backgroundColor = [UIColor colorWithRed:213 / 255.0 green:22 / 255.0 blue:89 / 255.0 alpha:1.0];
         [_nearbyCinemaBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
+       // [self requestRecommendCinemaData]; // 调用附近影院的网络请求
+        [self requestNearbyCinemaData];
         [_recommendCinemaBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _recommendCinemaBtn.backgroundColor = [UIColor whiteColor];
-        [self.table reloadData];
     }
     
 }

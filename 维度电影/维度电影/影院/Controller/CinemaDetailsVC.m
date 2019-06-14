@@ -9,6 +9,7 @@
 #import "CinemaDetailsVC.h"
 #import "LQScrollView.h"
 #import "CinemaDetailsTableViewCell.h"
+#import "TimeVC.h"
 
 @interface CinemaDetailsVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -69,23 +70,23 @@
 
 #pragma mark - 影院详情
 - (void)setCinemaDetails{
-    _cinemaImg = [[UIImageView alloc]initWithFrame:CGRectMake(20, 40, 50, 50)];
+    _cinemaImg = [[UIImageView alloc]initWithFrame:CGRectMake(20, 60, 50, 50)];
     _cinemaImg.backgroundColor = [UIColor whiteColor];
     _cinemaImg.image = [UIImage imageNamed:@"ccc"];
     [self.myImg addSubview:_cinemaImg];
     
-    _cinemaName = [[UILabel alloc]initWithFrame:CGRectMake(80, 40, 100, 20)];
+    _cinemaName = [[UILabel alloc]initWithFrame:CGRectMake(80, 60, 100, 20)];
     _cinemaName.text = @"CGV影城";
     _cinemaName.textColor = [UIColor whiteColor];
     [self.myImg addSubview:_cinemaName];
     
-    _cinemaLocation = [[UILabel alloc]initWithFrame:CGRectMake(80, 60, 280, 20)];
+    _cinemaLocation = [[UILabel alloc]initWithFrame:CGRectMake(80, 80, 280, 20)];
     _cinemaLocation.text = @"似懂非懂所发生的发生的发生的事的非农数据发达的发达大法";
     _cinemaLocation.textColor = [UIColor lightGrayColor];
     _cinemaLocation.font = [UIFont systemFontOfSize:15];
     [self.myImg addSubview:_cinemaLocation];
     
-    _navigationImg = [[UIImageView alloc]initWithFrame:CGRectMake(370, 50, 30, 30)];
+    _navigationImg = [[UIImageView alloc]initWithFrame:CGRectMake(370, 70, 30, 30)];
     _navigationImg.image = [UIImage imageNamed:@"daohang"];
     [self.myView addSubview:_navigationImg];
 }
@@ -101,10 +102,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     CinemaDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     
-    
-    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TimeVC *time = [[TimeVC alloc]init];
+    [self.navigationController pushViewController:time animated:YES];
+    
+}
 
 @end
