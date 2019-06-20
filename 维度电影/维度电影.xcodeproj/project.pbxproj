@@ -43,6 +43,7 @@
 		ECA2F19822B33760001B990E /* FocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19722B33760001B990E /* FocusViewController.m */; };
 		ECA2F19B22B33768001B990E /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19A22B33768001B990E /* BuyViewController.m */; };
 		ECA2F19E22B38597001B990E /* DengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19D22B38597001B990E /* DengLuViewController.m */; };
+		ECDD2D1A22BB203500164E47 /* ZhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD2D1922BB203500164E47 /* ZhuceViewController.m */; };
 		ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */; };
 		ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0D0022B200400026682C /* FeedbackViewController.m */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,8 @@
 		ECA2F19A22B33768001B990E /* BuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		ECA2F19C22B38597001B990E /* DengLuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DengLuViewController.h; sourceTree = "<group>"; };
 		ECA2F19D22B38597001B990E /* DengLuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DengLuViewController.m; sourceTree = "<group>"; };
+		ECDD2D1822BB203500164E47 /* ZhuceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuceViewController.h; sourceTree = "<group>"; };
+		ECDD2D1922BB203500164E47 /* ZhuceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuceViewController.m; sourceTree = "<group>"; };
 		ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
 		ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
 		ECFA0CFF22B200400026682C /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
@@ -344,6 +347,8 @@
 			children = (
 				ECA2F19C22B38597001B990E /* DengLuViewController.h */,
 				ECA2F19D22B38597001B990E /* DengLuViewController.m */,
+				ECDD2D1822BB203500164E47 /* ZhuceViewController.h */,
+				ECDD2D1922BB203500164E47 /* ZhuceViewController.m */,
 				ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */,
 				ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */,
 				ECA2F19622B33760001B990E /* FocusViewController.h */,
@@ -496,6 +501,7 @@
 				10DB9F6522AC981F00E506B4 /* AppDelegate.m in Sources */,
 				DA017A0822B1DEDF0005E402 /* CinemaModel.m in Sources */,
 				DA296C2E22B344460095068E /* CinemaNameQueryMd.m in Sources */,
+				ECDD2D1A22BB203500164E47 /* ZhuceViewController.m in Sources */,
 				DA296C1922B337F20095068E /* CinemaInformationMd.m in Sources */,
 				DA646BD022B0A25400B46682 /* CinemaDetailsVC.m in Sources */,
 				DA296C2822B341110095068E /* CinemaCommtensMd.m in Sources */,

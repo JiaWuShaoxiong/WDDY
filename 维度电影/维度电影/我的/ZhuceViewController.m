@@ -1,15 +1,15 @@
 //
-//  DengLuViewController.m
+//  ZhuceViewController.m
 //  维度电影
 //
-//  Created by  申月上浣 on 2019/6/14.
+//  Created by  申月上浣 on 2019/6/20.
 //  Copyright © 2019 。。。. All rights reserved.
 //
 
-#import "DengLuViewController.h"
 #import "ZhuceViewController.h"
 
-@interface DengLuViewController ()
+@interface ZhuceViewController ()
+
 
 @property(nonatomic,strong)UITextField * zhanghao;
 @property(nonatomic,strong)UITextField * password;
@@ -17,28 +17,18 @@
 
 @property (nonatomic,strong)UIButton *returnBtn; // 返回按钮
 @property (nonatomic,strong)UIButton *login; // 登录按钮
-@property (nonatomic,strong)UIButton * registion; // 注册按钮
+
 
 @end
 
-@implementation DengLuViewController
+@implementation ZhuceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationController.navigationBar.hidden = YES;
-    
-    // AppIcon
-    UIImageView * tu = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 90)/2, 120, 90, 90)];
-    tu.image = [UIImage imageNamed:@"AppIcon"];
-    [self.view addSubview:tu];
-    
-    UILabel * lab = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 100)/2, 210, 100, 50)];
-    lab.text = @"用户登录";
-    lab.textAlignment = NSTextAlignmentCenter;
-    lab.font = [UIFont systemFontOfSize:20];
-    [self.view addSubview:lab];
     
     _returnBtn = [[UIButton alloc]initWithFrame:CGRectMake(30, UIScreen.mainScreen.bounds.size.height - 100, 60, 60)];
     _returnBtn.layer.cornerRadius = 30;
@@ -47,6 +37,17 @@
     [_returnBtn addTarget:self action:@selector(setReturnBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_returnBtn];
     
+    
+    // AppIcon
+    UIImageView * tu = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 90)/2, 120, 90, 90)];
+    tu.image = [UIImage imageNamed:@"AppIcon"];
+    [self.view addSubview:tu];
+    
+    UILabel * lab = [[UILabel alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 120)/2, 210, 120, 50)];
+    lab.text = @"新用户注册";
+    lab.textAlignment = NSTextAlignmentCenter;
+    lab.font = [UIFont systemFontOfSize:20];
+    [self.view addSubview:lab];
     
     
     _zhanghao = [[UITextField alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 350)/2, 300, 350, 50)];
@@ -71,12 +72,6 @@
     [_login setTitle:@"登录" forState:UIControlStateNormal];
     [self.view addSubview:self.login];
     
-    _registion = [[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 50)/2, 565, 50, 30)];
-    [_registion setTitle:@"注册" forState:UIControlStateNormal];
-    [_registion setTitleColor:[UIColor colorWithRed:0.31 green:0.54 blue:0.97 alpha:1.00] forState:UIControlStateNormal];
-    [_registion addTarget:self action:@selector(zhuce) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.registion];
-    
     
 }
 
@@ -87,13 +82,14 @@
 
 
 
--(void)zhuce{
-    
-    ZhuceViewController * zhuce = [[ZhuceViewController alloc]init];
-    zhuce.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:zhuce animated:YES];
-    
-}
+
+
+
+
+
+
+
+
 
 
 - (void)setReturnBtn{

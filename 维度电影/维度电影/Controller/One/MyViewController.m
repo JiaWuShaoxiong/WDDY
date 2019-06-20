@@ -11,6 +11,7 @@
 #import "FeedbackViewController.h"
 #import "FocusViewController.h"
 #import "BuyViewController.h"
+#import "DengLuViewController.h"
 
 @interface MyViewController ()
 
@@ -34,15 +35,23 @@
     
     // 头像
     _imgV = [[UIImageView alloc]initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-100)/2, 100, 100, 100)];
-    [_imgV setImage:[UIImage imageNamed:@"hdpia"]];
+    _imgV.image = [UIImage imageNamed:@"DD4DCCC42DDB04C017EC108A9698F682"];
     _imgV.layer.masksToBounds = YES;
     _imgV.layer.cornerRadius = 50;
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
+    [_imgV addGestureRecognizer:tapGesture];
+    _imgV.userInteractionEnabled = YES; // 打开用户交互
+    
+    
+    
+    
     
     // 昵称
     _nickName = [[UILabel alloc]initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-200)/2, 220, 200, 30)];
     _nickName.textAlignment = NSTextAlignmentCenter;
     _nickName.font = [UIFont systemFontOfSize:20];
-    _nickName.text = @"冬天来了";
+    _nickName.text = @"点击登录/注册";
     _nickName.textColor = [UIColor whiteColor];
     
     // 系统消息按钮
@@ -51,12 +60,12 @@
     systemNewsBtn.layer.masksToBounds = YES;
     systemNewsBtn.layer.cornerRadius = 35/2;
     
-    
-    [view addSubview:systemNewsBtn];
-    [view addSubview:self.nickName];
-    [view addSubview:self.imgV];
-    
     [self.view addSubview:view];
+    [self.view addSubview:systemNewsBtn];
+    [self.view addSubview:self.nickName];
+    [self.view addSubview:self.imgV];
+    
+    
     
     
     
@@ -199,6 +208,17 @@
     
     
 }
+
+
+
+-(void)clickImage{
+    DengLuViewController * denglu = [[DengLuViewController  alloc]init];
+    denglu.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:denglu animated:YES];
+}
+
+
+
 
 // 我的信息
 -(void)myNews{
