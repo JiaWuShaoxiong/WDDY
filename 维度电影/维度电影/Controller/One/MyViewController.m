@@ -53,6 +53,9 @@
     _nickName.font = [UIFont systemFontOfSize:20];
     _nickName.text = @"点击登录/注册";
     _nickName.textColor = [UIColor whiteColor];
+    UITapGestureRecognizer *tapGesture1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickImage)];
+    [_nickName addGestureRecognizer:tapGesture1];
+    _nickName.userInteractionEnabled = YES; // 打开用户交互
     
     // 系统消息按钮
     UIButton * systemNewsBtn = [[UIButton alloc]initWithFrame:CGRectMake(35, 60, 35, 35)];
