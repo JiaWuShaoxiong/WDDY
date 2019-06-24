@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 // URL 参数 请求成功与失败
 + (void)GetWithUrl:(NSString *)urlStr paramas:(NSDictionary *)parmas Success:(void(^)(id responseObject))success Failure:(void(^)(NSError *error))failure;
 
+
++(void)PostWithUrl:(NSString*)urlStr Paramas:(NSDictionary*)params  Success:(void(^)(id responseObject))success Failure:(void(^)(NSError* error))failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,11 @@
 
 #import "DengLuViewController.h"
 #import "ZhuceViewController.h"
+#import "HttpManager.h"
+#import "UserInfo.h"
+#import "HttpManager.h"
+#import "UserManager.h"
+#import "MJExtension.h"
 
 @interface DengLuViewController ()
 
@@ -69,6 +74,7 @@
     _login = [[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 350)/2, 500, 350, 50)];
     _login.backgroundColor = [UIColor blackColor];
     [_login setTitle:@"登录" forState:UIControlStateNormal];
+    [_login addTarget:self action:@selector(denglu) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.login];
     
     _registion = [[UIButton alloc]initWithFrame:CGRectMake((self.view.frame.size.width - 50)/2, 565, 50, 30)];
@@ -81,6 +87,26 @@
 }
 
 
+-(void)denglu{
+    
+    [HttpManager PostWithUrl:@"/tzw/user!request.action" Paramas:@{@"phone":self.zhanghao.text,@"pwd":self.password.text} Success:^(id  _Nonnull responseObject) {
+        
+        NSLog(@"responseObject:%@",responseObject);
+        
+        NSDictionary * dic = responseObject[@"result"];
+        
+        UserInfo * userInfo = [UserInfo mj_objectWithKeyValues:dic];
+        
+        [[UserManager shareUserManager]resetLoginUserInfo:userInfo];
+        
+    } Failure:^(NSError * _Nonnull error) {
+        
+        
+    }];
+    
+    
+    
+}
 
 
 

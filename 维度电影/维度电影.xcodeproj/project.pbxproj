@@ -44,6 +44,9 @@
 		ECA2F19B22B33768001B990E /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19A22B33768001B990E /* BuyViewController.m */; };
 		ECA2F19E22B38597001B990E /* DengLuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA2F19D22B38597001B990E /* DengLuViewController.m */; };
 		ECDD2D1A22BB203500164E47 /* ZhuceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD2D1922BB203500164E47 /* ZhuceViewController.m */; };
+		ECDD2D1F22BC5ED400164E47 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD2D1C22BC5ED300164E47 /* UserInfo.m */; };
+		ECDD2D2022BC5ED400164E47 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD2D1D22BC5ED300164E47 /* UserManager.m */; };
+		ECDD2D2322BC65EB00164E47 /* DengluModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD2D2222BC65EB00164E47 /* DengluModel.m */; };
 		ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */; };
 		ECFA0D0122B200400026682C /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA0D0022B200400026682C /* FeedbackViewController.m */; };
 /* End PBXBuildFile section */
@@ -119,6 +122,12 @@
 		ECA2F19D22B38597001B990E /* DengLuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DengLuViewController.m; sourceTree = "<group>"; };
 		ECDD2D1822BB203500164E47 /* ZhuceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuceViewController.h; sourceTree = "<group>"; };
 		ECDD2D1922BB203500164E47 /* ZhuceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuceViewController.m; sourceTree = "<group>"; };
+		ECDD2D1B22BC5ED300164E47 /* UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		ECDD2D1C22BC5ED300164E47 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		ECDD2D1D22BC5ED300164E47 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		ECDD2D1E22BC5ED300164E47 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		ECDD2D2122BC65EB00164E47 /* DengluModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DengluModel.h; sourceTree = "<group>"; };
+		ECDD2D2222BC65EB00164E47 /* DengluModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DengluModel.m; sourceTree = "<group>"; };
 		ECFA0CFC22B1D7210026682C /* MyNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNewsViewController.h; sourceTree = "<group>"; };
 		ECFA0CFD22B1D7210026682C /* MyNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNewsViewController.m; sourceTree = "<group>"; };
 		ECFA0CFF22B200400026682C /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
@@ -201,6 +210,10 @@
 		10DB9F6222AC981F00E506B4 /* 维度电影 */ = {
 			isa = PBXGroup;
 			children = (
+				ECDD2D1B22BC5ED300164E47 /* UserInfo.h */,
+				ECDD2D1C22BC5ED300164E47 /* UserInfo.m */,
+				ECDD2D1E22BC5ED300164E47 /* UserManager.h */,
+				ECDD2D1D22BC5ED300164E47 /* UserManager.m */,
 				10024E6622B1EE79009CDB25 /* DiSanFang3D */,
 				DA646BC022B0A0B500B46682 /* HttpManager.h */,
 				DA646BC122B0A0B500B46682 /* HttpManager.m */,
@@ -342,7 +355,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		ECFA0CFB22B1D7080026682C /* 我的 */ = {
+		ECDD2D2422BC660900164E47 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				ECA2F19C22B38597001B990E /* DengLuViewController.h */,
@@ -357,6 +370,32 @@
 				ECA2F19A22B33768001B990E /* BuyViewController.m */,
 				ECFA0CFF22B200400026682C /* FeedbackViewController.h */,
 				ECFA0D0022B200400026682C /* FeedbackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECDD2D2522BC660C00164E47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECDD2D2622BC660F00164E47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD2D2122BC65EB00164E47 /* DengluModel.h */,
+				ECDD2D2222BC65EB00164E47 /* DengluModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECFA0CFB22B1D7080026682C /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD2D2622BC660F00164E47 /* Model */,
+				ECDD2D2522BC660C00164E47 /* View */,
+				ECDD2D2422BC660900164E47 /* Controller */,
 			);
 			path = "我的";
 			sourceTree = "<group>";
@@ -487,11 +526,14 @@
 			files = (
 				DA646BC922B0A17D00B46682 /* CinemaTableViewCell.m in Sources */,
 				1062AA3722AE334400513D7B /* MyViewController.m in Sources */,
+				ECDD2D2022BC5ED400164E47 /* UserManager.m in Sources */,
+				ECDD2D1F22BC5ED400164E47 /* UserInfo.m in Sources */,
 				10DB9F6822AC981F00E506B4 /* ViewController.m in Sources */,
 				1062AA3222AE333900513D7B /* CinemaViewController.m in Sources */,
 				DA296C1622B332AA0095068E /* NearbyCinemaMd.m in Sources */,
 				DA646BC222B0A0B500B46682 /* HttpManager.m in Sources */,
 				ECFA0CFE22B1D7210026682C /* MyNewsViewController.m in Sources */,
+				ECDD2D2322BC65EB00164E47 /* DengluModel.m in Sources */,
 				DA296C1C22B33CA50095068E /* UserFollowCinemaMd.m in Sources */,
 				DA296C2222B33EA20095068E /* RemoveAttentionMd.m in Sources */,
 				DA296C2B22B3422D0095068E /* FollowCinema.m in Sources */,
